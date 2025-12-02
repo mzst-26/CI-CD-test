@@ -18,6 +18,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build
+        run: LIGHTNINGCSS_IGNORE_NATIVE=1 npm run build
+
       - name: Run tests
-        run: npm test
+        run: LIGHTNINGCSS_IGNORE_NATIVE=1 npm test
